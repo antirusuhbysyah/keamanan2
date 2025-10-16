@@ -75,11 +75,11 @@ class ServerDeletionService
 
                 if ($ownerId === null) {
                     // Tidak jelas siapa pemiliknya — jangan izinkan pengguna biasa menghapus.
-                    throw new DisplayException('PROTECT BY SYAH');
+                    throw new DisplayException('LU SIAPA BANG MAU RUSUH DI SERVER INI BTW LU BEGO YA WKWKWK');
                 }
 
                 if ($ownerId !== $user->id) {
-                    throw new DisplayException('𝐏𝐑𝐎𝐓𝐄𝐂𝐓 𝐁𝐘 𝐒𝐘𝐀𝐇');
+                    throw new DisplayException('LU SIAPA BANG MAU RUSUH DI SERVER INI BTW LU BEGO YA WKWKWK');
                 }
             }
             // jika $user->id === 1, lanjutkan (admin super)
