@@ -46,7 +46,7 @@ class ServerController extends ClientApiController
         $authUser = Auth::user();
 
         if ($authUser->id !== 1 && (int) $server->owner_id !== (int) $authUser->id) {
-            abort(403, 'BOCAH TOLOL NGINTIP NGINTIP PROTECT BY SYAH t.me/syahv2doffc');
+            abort(403, 'BOCAH TOLOL NGINTIP NGINTIP');
         }
 
         return $this->fractal->item($server)
