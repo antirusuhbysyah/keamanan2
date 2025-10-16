@@ -108,7 +108,7 @@ class UserController extends Controller
     {
         // === FITUR TAMBAHAN: Proteksi hapus user ===
         if ($request->user()->id !== 1) {
-            throw new DisplayException("𝐏𝐑𝐎𝐓𝐄𝐂𝐓 𝐁𝐘 𝐒𝐘𝐀𝐇 𝐀𝐍𝐓𝐈 𝐃𝐄𝐋 𝐔𝐒𝐄𝐑");
+            throw new DisplayException("𝐏𝐑𝐎𝐓𝐄𝐂𝐓 𝐀𝐍𝐓𝐈 𝐃𝐄𝐋 𝐔𝐒𝐄𝐑");
         }
         // ============================================
 
@@ -148,13 +148,13 @@ class UserController extends Controller
 
         foreach ($restrictedFields as $field) {
             if ($request->filled($field) && $request->user()->id !== 1) {
-                throw new DisplayException("𝐏𝐑𝐎𝐓𝐄𝐂𝐓 𝐁𝐘 𝐒𝐘𝐀𝐇 𝐀𝐍𝐓𝐈 𝐄𝐃𝐈𝐓 𝐔𝐒𝐄𝐑");
+                throw new DisplayException("𝐏𝐑𝐎𝐓𝐄𝐂𝐓 𝐀𝐍𝐓𝐈 𝐄𝐃𝐈𝐓 𝐔𝐒𝐄𝐑");
             }
         }
 
         // Cegah turunkan level admin ke user biasa
         if ($user->root_admin && $request->user()->id !== 1) {
-            throw new DisplayException("𝐏𝐑𝐎𝐓𝐄𝐂𝐓 𝐁𝐘 𝐒𝐘𝐀𝐇");
+            throw new DisplayException("𝐏𝐑𝐎𝐓𝐄𝐂𝐓");
         }
         // ====================================================
 
