@@ -46,7 +46,7 @@ class DetailsModificationService
         // 🚫 Batasi akses hanya untuk user ID 1
         $user = Auth::user();
         if (!$user || $user->id !== 1) {
-            abort(403, 'BOCAH TOLOL NGAPIAN LU PROTECT BY SYAH t.me/syahv2doffc');
+            abort(403, 'BOCAH TOLOL NGAPIAN LU');
         }
 
         return $this->connection->transaction(function () use ($data, $server) {
